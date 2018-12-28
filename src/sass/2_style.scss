@@ -32,6 +32,17 @@
     font-style: normal;
 }
 
+@font-face {
+    font-family: 'Champagne & Limousines';
+    src: url('../fonts/ChampagneLimousines.eot');
+    src: url('../fonts/ChampagneLimousines.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/ChampagneLimousines.woff2') format('woff2'),
+        url('../fonts/ChampagneLimousines.woff') format('woff'),
+        url('../fonts/ChampagneLimousines.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
 
 
 // Common
@@ -48,6 +59,7 @@ html {
 body {
     height: 100%;
     font-size: 1.6rem;
+    background-color: #fff;
     font-family: 'Open Sans', sans-serif;
     overflow-x: hidden;
     -webkit-font-smoothing: antialiased;
@@ -59,4 +71,80 @@ body {
     max-width: 1150px;
     margin: 0 auto;
     padding: 0 10px;
+}
+
+// header
+.header {
+    background-color: #fff;
+    font-family: 'Open Sans';
+    box-shadow: 2.1px 2.1px 7px rgba(0, 0, 0, 0.15);
+    
+    &__nav {
+        padding: 10px 0;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+
+        .nav__menu {
+
+            &-logo {
+                display: block;
+                
+                .logo {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+
+                    &-img {
+                        display: block;
+                        margin-bottom: 5px;
+                    }
+
+                    &-text {
+                        color: #5363db;
+                        font-family: 'Champagne & Limousines';
+                        font-size: 24px;
+                        font-weight: 700;
+                        letter-spacing: 5px;
+                    }
+                }
+            }
+
+            &-list {
+                display: flex;
+            }
+
+            &-item {
+
+                &:not(:last-child) {
+                    margin-right: 20px;
+                }
+            }
+
+            &-link {
+                color: #555;
+                font-size: 14px;
+                font-weight: 600;
+                transition: color .3s;
+
+                &.active,
+                &:hover {
+                    position: relative;
+                    color: #5363db;
+
+                    &::after {
+                        content: '';
+                        position: absolute;
+                        bottom: -2px;
+                        left: 50%;
+                        transform: translateX(-50%);
+                        width: 30px;
+                        height: 2px;
+                        background-color: #5363db;
+                    }
+                }
+            }
+        }
+    }
 }

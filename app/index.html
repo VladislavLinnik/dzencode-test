@@ -34,7 +34,40 @@
 	<title>DzenCode (test)</title>
 </head>
 <body>
-	
+	<header class="header">
+		<div class="container">
+			<!-- 
+				Два варианта: два меню с одним контейнером, а лого посередине абсолютом или
+				положить меню и лого в один флекс-контейнер и при адаптиве лого сдвинуть наверх.
+				Я сделал по второму, так как в первом при адаптиве возникают сложности, но при таком подходе
+				не сделать гамбургер меню при адаптиве.
+			-->
+			<div class="header__nav">
+				<nav class="nav__menu">
+					<ul class="nav__menu-list">
+						<li class="nav__menu-item"><a class="nav__menu-link active" href="#">About us</a></li>
+						<li class="nav__menu-item"><a class="nav__menu-link" href="#">Reservation</a></li>
+						<li class="nav__menu-item"><a class="nav__menu-link" href="#">Gallery</a></li>
+					</ul>
+				</nav>
+				<div class="nav__menu">
+					<a href="/" class="nav__menu-logo">
+						<div class="logo">
+							<img class="logo-img" src="img/logo.png" alt="">
+							<span class="logo-text">YOGA</span>
+						</div>
+					</a>
+				</div>
+				<nav class="nav__menu">
+					<ul class="nav__menu-list">
+						<li class="nav__menu-item"><a class="nav__menu-link" href="#">Blog</a></li>
+						<li class="nav__menu-item"><a class="nav__menu-link" href="#">Elements</a></li>
+						<li class="nav__menu-item"><a class="nav__menu-link" href="#">Shop</a></li>
+					</ul>
+				</nav>
+			</div>
+		</div>
+	</header>
 
 
 
