@@ -506,7 +506,20 @@ body {
 
 
 .sections {
-    background: url(../img/logo-decor.png) no-repeat;
+    position: relative;
+    overflow: hidden;
+
+    &-img {
+        width: 70%;
+        position: absolute;
+        right: -5%;
+        bottom: -10%;
+        z-index: -99;
+
+        img {
+            max-width: 100%;
+        }
+    }
 }
 
 .prices {
@@ -633,12 +646,207 @@ body {
 .reviews {
 
     &-slider {
+        box-shadow: 6.4px 6.4px 50px rgba(0, 0, 0, 0.1);
+
+        .slick-list {
+            // overflow: visible !important;
+        }
+
+        .slick-dots {
+            position: absolute;
+            right: -50px;
+            top: 50%;
+            transform: translateY(-50%);
+
+            li {
+                padding: 2px;
+                border: 2px solid #d7d7d7;
+                border-radius: 50%;
+
+                button {
+                    width: 12px;
+                    height: 12px;
+                    display: block;
+                    background-color: transparent;
+                    text-indent: -99999px;
+                }
+            }
+
+            li.slick-active {
+                border: 2px solid #5b6ceb;
+
+                button {
+                    background-color: #5b6ceb;
+                    border-radius: 50%;
+                }
+            }
+
+            li + li {
+                margin-top: 10px;
+            }
+        }
 
         .slide {
+            padding: 40px 60px 70px;
             position: relative;
+            display: flex;
             background-color: #fff;
             border-radius: 8px;
-            box-shadow: 6.4px 6.4px 50px rgba(0, 0, 0, 0.1);
+
+            &-img {
+                width: 20%;
+                
+                img {
+                    padding: 8px;
+                    min-width: 125px;
+                    min-height: 125px;
+                    display: block;
+                    border-radius: 50%;
+                    border: 2px solid #d7d7d7;
+                }
+            }
+
+            &-text {
+                padding-left: 50px;
+                width: 60%;
+                position: relative;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+
+                &:before {
+                    content: '';
+                    position: absolute;
+                    left: 0;
+                    bottom: 0;
+                    width: 2px;
+                    height: 50%;
+                    background-color: #E5E5E5;
+                }
+
+                .quote {
+                    margin-bottom: 30px;
+                    position: relative;
+                    color: #555;
+                    font-size: 14px;
+                    font-style: italic;
+                    line-height: 22px;
+
+                    &:before, &:after {
+                        content: '';
+                        position: absolute;
+                        color: #5b6ceb;
+                        font-size: 60px;
+                        font-weight: 400;
+                        line-height: 22px;
+                    }
+
+                    &:before {
+                        content: '”';
+                        top: 0;
+                        margin-top: -20px;
+                        left: -50px;
+                        transform: rotate(180deg);
+                    }
+
+                    &:after {
+                        content: '”';
+                        bottom: 0;
+                        right: 0;
+                        margin-right: -50px;
+                        margin-bottom: -40px;
+                    }
+                }
+
+                .role {
+                    color: #777;
+                    font-size: 14px;
+                    font-weight: 400;
+                }
+
+                .name {
+                    color: #5b6ceb;
+                    font-size: 16px;
+                    font-weight: 700;
+                }
+            }
+
+            &-bottom {
+                position: absolute;
+                // bottom: -28px;
+                bottom: 0;
+                left: 30%;
+                z-index: 999;
+
+                .bottom-block {
+                    position: relative;
+                    display: flex;
+                    align-items: center;
+
+                    .img {
+                        margin-right: 10px;
+                        width: 60px;
+                        height: 60px;
+
+                        img {
+                            padding: 2px;
+                            max-width: 100%;
+                            display: block;
+                            border-radius: 50%;
+                            border: 2px solid #d7d7d7;
+                        }
+                    }
+
+                    .text {
+
+                        .name {
+                            margin-bottom: 5px;
+                            color: #555;
+                            font-size: 14px;
+                            font-weight: 700;
+                        }
+
+                        .role {
+                            color: #777;
+                            font-size: 12px;
+                            font-weight: 400;
+                        }
+                    }
+
+                    .slider-arrows {
+
+                        .bottom-prev,
+                        .bottom-next {
+                            position: absolute;
+                            top: 50%;
+                            transform: translateY(-50%);
+                            z-index: 1000;
+            
+                            width: 25px;
+                            height: 25px;
+                            background-color: #fff;
+                            border-radius: 50%;
+                            box-shadow: 1.4px 2.4px 10px rgba(0,0,0,0.3);
+                            cursor: pointer;
+            
+                            i {
+                                color:#5b6ceb;
+                                font-size: 14px;
+                            }
+                        }
+
+                        .bottom-prev {
+                            left: 0;
+                            margin-left: -50px;
+                        }
+
+                        .bottom-next {
+                            right: 0;
+                            margin-right: -50px;
+                        }
+                    }
+                }
+            }
         }
     }
 }
