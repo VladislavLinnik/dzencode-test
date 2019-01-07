@@ -11,6 +11,7 @@ $('.js-review-slider').slick({
     nextArrow:"<button type='button' class='bottom-next pull-right'><i class='fa fa-angle-right' aria-hidden='true'></i></button>"
 });
 
+// Знаю что так делать плохо.
 $('.js-btn-1').hover(function(){
     $('.js-text-1').css('color', '#000');
 }, function() {
@@ -27,10 +28,14 @@ $('.js-btn-3').hover(function(){
     $('.js-text-3').css('color', '#fff');
 });
 
-// $('.bottom-prev').click(function(){
-//     $('.slider').slick('slickPrev');
-// });
+// sticky header
+$(window).scroll(function(){
+    var sticky = $('#js-header-fixed'),
+        scroll = $(window).scrollTop();
   
-// $('.bottom-next').click(function(){
-//     $('.slider').slick('slickNext');
-// });
+    if (scroll >= 150) {
+        sticky.addClass('fixed');
+    } else {
+        sticky.removeClass('fixed');
+    }
+});

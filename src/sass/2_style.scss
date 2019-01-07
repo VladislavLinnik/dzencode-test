@@ -82,6 +82,15 @@ body {
     font-family: 'Open Sans';
     box-shadow: 2.1px 2.1px 7px rgba(0, 0, 0, 0.15);
     
+    &.fixed {
+        width: 100%;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 9999;
+    }
+
     &__nav {
         padding: 10px 0;
         display: flex;
