@@ -1,15 +1,111 @@
-/* monitors and laptops */
-@media screen and (min-width: 1240px)  {
-	
-}
+@media screen and (max-width: 950px) {
+    .container {
+        max-width: 780px;
+    }
+    .section {
+        padding: 75px 0;
+    }
+	.header {
 
-/* tablet */
-@media screen and (max-width: 1240px)  {
-	
-}
+        &__nav {
+            justify-content: normal;
+            
+            .nav__menu {
 
-@media screen and (max-width: 1024px) {
-	
+                &--logo {
+                    margin-right: auto;
+                    order: -1;
+                }
+            }
+        }
+    }
+
+    .trial {
+
+        .container {
+            width: 100%;
+        }
+
+        &-card {
+            min-width: 400px;
+        }
+
+        &-text {
+            
+            .heading {
+                font-size: 30px;
+                line-height: 1.5;
+            }
+
+            .descr {
+                font-size: 34px;
+            }
+        }
+    }
+
+    .programs {
+
+        &-text {
+            margin-bottom: 20px;
+        }
+
+        .programs__products {
+
+            .product {
+                flex-direction: column;
+
+                &__img {
+                    width: 100%;
+                }
+
+                &__info {
+                    width: 100%;
+                }
+            }
+        }
+    }
+
+    .gallery {
+
+        &__item {
+            width: 50%;
+        }
+    }
+    
+    .reviews {
+
+        &-slider {
+
+            .slick-dots {
+                right: auto;
+                left: 50%;
+                top: 100%;
+                transform: translate(-50%, 0);
+
+                li {
+                    margin-right: 5px;
+                    display: inline-block;
+                }
+            }
+
+            .slide {
+                padding: 30px 20px 70px;
+
+                &-img {
+
+                }
+
+                &-text {
+                    width: 70%;
+                    padding-left: 80px;
+
+                    &:before {
+                        left: 35px;
+                    }
+                }
+            }
+        }
+    }
 }
 
 /* mobile */
