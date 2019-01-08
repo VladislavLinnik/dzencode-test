@@ -78,15 +78,17 @@
 			<div class="trial-card">
 				<div class="card clearfix">
 					<h3 class="card-heading">Trial Class</h3>
-					<input class="card-input" type="text" placeholder="Enter your name">
-					<input class="card-input" type="text" placeholder="Enter your phone">
-					<select class="card-select" name="">
-						<option value="">Choose your class</option>
-						<option value="">Beginner</option>
-						<option value="">Intermedium</option>
-						<option value="">Hard</option>
-					</select>
-					<input type="submit" value="Try it" class="card-btn">
+					<form action="" id="trial-form">
+						<input class="card-input" type="text" name="name" placeholder="Enter your name" required>
+						<input class="card-input" type="tel" name="phone" placeholder="Enter your phone" required onkeypress="validate(event)">
+						<select class="card-select" name="" required>
+							<option value="">Choose your class</option>
+							<option value="">Beginner</option>
+							<option value="">Intermedium</option>
+							<option value="">Hard</option>
+						</select>
+						<input type="submit" value="Try it" class="card-btn">
+					</form>
 				</div>
 			</div>
 			<div class="trial-text">
@@ -651,6 +653,7 @@
 
 
 	<script src="js/slick.min.js"></script>
+	<script src="js/jquery.validate.min.js"></script>
 	<script src="js/index.js"></script>
 </body>
 </html>
